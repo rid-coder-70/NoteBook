@@ -51,6 +51,7 @@ const NoteDetailPage = () => {
     try {
       await api.put(`/notes/${id}`, note);
       toast.success("Note updated successfully");
+      navigate("/");
       // stay on page instead of navigating away
     } catch (error) {
       console.error("Error saving the note:", error);
